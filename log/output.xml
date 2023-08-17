@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 6.1.1 (Python 3.11.4 on win32)" generated="20230816 22:57:48.856" rpa="false" schemaversion="4">
+<suite id="s1" name="AmazonProject" source="C:\Users\PC\IdeaProjects\RobotFrameworkDersleri\AmazonProject.robot">
+<test id="s1-t1" name="Nokia 3310 Arama Testi" line="12">
+<kw name="Open Browser" library="SeleniumLibrary">
+<arg>${URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<msg timestamp="20230816 22:57:49.596" level="INFO">Opening browser 'chrome' to base url 'https://www.amazon.com/'.</msg>
+<status status="PASS" starttime="20230816 22:57:49.595" endtime="20230816 22:57:57.853"/>
+</kw>
+<kw name="Maximize Browser Window" library="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" starttime="20230816 22:57:57.853" endtime="20230816 22:57:58.254"/>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<arg>id=twotabsearchtextbox</arg>
+<arg>${A_URUN}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<msg timestamp="20230816 22:57:58.255" level="INFO">Typing text 'Nokia 3310' into text field 'id=twotabsearchtextbox'.</msg>
+<status status="PASS" starttime="20230816 22:57:58.254" endtime="20230816 22:58:00.110"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>xpath=//input[@value='Go']</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230816 22:58:00.111" level="INFO">Clicking element 'xpath=//input[@value='Go']'.</msg>
+<status status="PASS" starttime="20230816 22:58:00.111" endtime="20230816 22:58:04.848"/>
+</kw>
+<kw name="Sleep" library="BuiltIn">
+<arg>2s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<msg timestamp="20230816 22:58:06.850" level="INFO">Slept 2 seconds</msg>
+<status status="PASS" starttime="20230816 22:58:04.848" endtime="20230816 22:58:06.850"/>
+</kw>
+<kw name="Get Text" library="SeleniumLibrary">
+<var>${Urunun_Texti}</var>
+<arg>css=.a-color-state.a-text-bold</arg>
+<doc>Returns the text value of the element identified by ``locator``.</doc>
+<msg timestamp="20230816 22:58:06.892" level="INFO">${Urunun_Texti} = "Nokia 3310"</msg>
+<status status="PASS" starttime="20230816 22:58:06.850" endtime="20230816 22:58:06.892"/>
+</kw>
+<kw name="Should Be Equal As Strings" library="BuiltIn">
+<arg>${Urunun_Texti}</arg>
+<arg>"Nokia 3310"</arg>
+<doc>Fails if objects are unequal after converting them to strings.</doc>
+<status status="PASS" starttime="20230816 22:58:06.892" endtime="20230816 22:58:06.893"/>
+</kw>
+<kw name="Go To" library="SeleniumLibrary">
+<arg>${URL_Registry}</arg>
+<doc>Navigates the current browser window to the provided ``url``.</doc>
+<msg timestamp="20230816 22:58:06.893" level="INFO">Opening url 'https://www.amazon.com/registries?ref_=nav_cs_registry&amp;ref_=nav_cs_registry'</msg>
+<status status="PASS" starttime="20230816 22:58:06.893" endtime="20230816 22:58:08.224"/>
+</kw>
+<kw name="Click Element" library="SeleniumLibrary">
+<arg>link=Gift Cards</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<msg timestamp="20230816 22:58:08.225" level="INFO">Clicking element 'link=Gift Cards'.</msg>
+<status status="PASS" starttime="20230816 22:58:08.224" endtime="20230816 22:58:10.323"/>
+</kw>
+<status status="PASS" starttime="20230816 22:57:49.593" endtime="20230816 22:58:10.323"/>
+</test>
+<status status="PASS" starttime="20230816 22:57:48.862" endtime="20230816 22:58:10.324"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="AmazonProject">AmazonProject</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
